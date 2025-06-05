@@ -1,0 +1,32 @@
+<Window x:Class="rTRIZBD4.MainWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Олимпиада" Height="600" Width="800"
+        Background="#808080">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Background="#808000">
+            <Button Content="Олимпиады" Margin="10" Padding="20 10" 
+                    Click="NavigateButton_Click" Tag="OlympicsPage.xaml"
+                    Background="#FFC0CB"/>
+            <Button Content="Организаторы" Margin="10" Padding="20 10" 
+                    Click="NavigateButton_Click" Tag="OrganizersPage.xaml"
+                    Background="#FFC0CB"/>
+            <Button Content="Участники" Margin="10" Padding="20 10" 
+                    Click="NavigateButton_Click" Tag="ParticipantsPage.xaml"
+                    Background="#FFC0CB"/>
+            <Button Content="Предметы" Margin="10" Padding="20 10" 
+                    Click="NavigateButton_Click" Tag="SubjectsPage.xaml"
+                    Background="#FFC0CB"/>
+            <Button Content="Результаты" Margin="10" Padding="20 10"
+                    Click="NavigateButton_Click" Tag="ResultsPage.xaml"
+                    Background="#FFC0CB"/>
+        </StackPanel>
+
+        <Frame Grid.Column="1" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
