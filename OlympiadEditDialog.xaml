@@ -1,0 +1,18 @@
+<Window x:Class="rTRIZBD4.OlympiadEditDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование олимпиады" Height="200" Width="300"
+        WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="10">
+        <TextBlock Text="Название:"/>
+        <TextBox Text="{Binding Olympiad.Name, UpdateSourceTrigger=PropertyChanged}" 
+                 Margin="0,5,0,10"/>
+
+        <TextBlock Text="Дата:"/>
+        <TextBox Text="{Binding Olympiad.Date, UpdateSourceTrigger=PropertyChanged}" 
+                 Margin="0,5,0,10"/>
+
+        <Button Content="Сохранить" Click="Save_Click" 
+                HorizontalAlignment="Center" Padding="10,5"/>
+    </StackPanel>
+</Window>
