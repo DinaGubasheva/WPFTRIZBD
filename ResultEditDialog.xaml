@@ -1,0 +1,23 @@
+<Window x:Class="rTRIZBD4.ResultEditDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование результата" Height="350" Width="500"
+        WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="15">
+        <TextBlock Text="ФИО участника:" FontSize="16" Margin="0,0,0,5"/>
+        <TextBox Text="{Binding FullName, UpdateSourceTrigger=PropertyChanged}" 
+                 FontSize="16" Margin="0,0,0,15"/>
+
+        <TextBlock Text="Результат:" FontSize="16" Margin="0,0,0,5"/>
+        <TextBox Text="{Binding Score, UpdateSourceTrigger=PropertyChanged}" 
+                 FontSize="16" Margin="0,0,0,15"/>
+
+        <TextBlock Text="Место получения результата:" FontSize="16" Margin="0,0,0,5"/>
+        <TextBox Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}" 
+                 FontSize="16" Margin="0,0,0,20"
+                 TextWrapping="Wrap" AcceptsReturn="True" Height="80"/>
+
+        <Button Content="Сохранить" Click="SaveButton_Click" 
+                HorizontalAlignment="Center" Padding="10,5" Width="100"/>
+    </StackPanel>
+</Window>
